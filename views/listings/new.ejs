@@ -1,0 +1,45 @@
+<% layout("layouts/boilerplate") %>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-dark text-white text-center">
+                    <h3>Create New Listing</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/listings" method="POST" novalidate class="needs-validation">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control" required>
+                        </div>
+                        <div class="valid-feedback">Title looks good !</div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea name="listing[description]" placeholder="Enter description" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image URL</label>
+                            <input name="listing[image[url]]" placeholder="Enter image URL" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price</label>
+                            <input name="listing[price]" placeholder="Enter price" type="number" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input name="listing[location]" placeholder="Enter location" type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <input name="listing[country]" placeholder="Enter country" type="text" class="form-control" required>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn  btn-lg add-btn">Add Listing</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
